@@ -198,10 +198,9 @@ The new-app command handles the majority of resource creation via template.  Not
 We can view the resources that were created as part of the new-app command, as well as the build/deploy resources that were created automatically. Notice that the new-app automatically started a new build of our code, and the deployment config watches successful builds to know when to next rollout/deploy. A good place to start with viewing application status is checking the pods in your project:
 
 ```
-$ oc get pods NAME READY STATUS RESTARTS AGE ruby-ex-1-a7y56 1/1 Running 0 24m
-```
-
-```
+$ oc get pods
+NAME READY STATUS RESTARTS AGE 
+ruby-ex-1-a7y56 1/1 Running 0 24m
 ruby-ex-1-build 0/1 Completed 0 26m
 ```
 
@@ -210,7 +209,10 @@ This shows us the build pod completed successfully. Additionally we can see that
 The status command shows us similar results:
 
 ```
-$ oc status -v In project My Project (myproject1) on server https://openshift.example.com:443 svc/ruby-ex - 172.30.36.21:8080 dc/ruby-ex deploys istag/ruby-ex:latest <bc/ruby-ex source builds https://github.com/openshift/ruby-ex.git on istag/ruby22-centos7:latest deployment #1 deployed 26 minutes ago - 1 pod Warnings: * dc/ruby-ex has no readiness probe to verify pods are ready to accept traffic or ensure deployment is successful. try: oc set probe dc/ruby-ex --readiness ... View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
+$ oc status -v 
+In project My Project (myproject1) on server https://openshift.example.com:443 svc/ruby-ex - 172.30.36.21:8080 
+dc/ruby-ex deploys istag/ruby-ex:latest <bc/ruby-ex source builds https://github.com/openshift/ruby-ex.git on istag/ruby22-centos7:latest 
+deployment #1 deployed 26 minutes ago - 1 pod Warnings: * dc/ruby-ex has no readiness probe to verify pods are ready to accept traffic or ensure deployment is successful. try: oc set probe dc/ruby-ex --readiness ... View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
 ```
 
 ## Add a volume

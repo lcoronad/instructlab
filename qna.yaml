@@ -1,5 +1,22 @@
 version: 3
-domain: Red Hat Openshift Cheat Sheet
+domain: Red Hat Openshift 4.15 Cheat Sheet
 created_by: mtclemente and lcoronad
 document_outline: |
-  A high-level listing of operations from command line interface is provided, followed by a walkthrough of an example application build, deploy, and management.
+  A high-level listing of operations from command line interface (CLI) is provided, followed by a walkthrough of an example application build, deploy, and management.
+seed_examples:
+  - context: |
+      Openshift (OCP) makes use of the Kubernetes upstream project to provide a secure, robust, and extendable manner for orchestrating applications. Openshift works to further the access management and build/deploy services that are provided in the upstream Kubernetes project. Development teams are empowered to own and maintain their applications through production environments, while operations teams can provide the guide rails for developers to have that application ownership in a multi-tenant environment.
+    questions_and_answers:
+      - question: |
+          How do I login into OCP with CLI?
+        answer: |
+          The command to login in OCP is "oc login -u user http://api.cluster:6443"
+      - question: |
+          How I create project into OCP with CLI?
+        answer: |
+          The command to create project into OCP is "oc new-project my-project"
+      - question: |
+          How to get resources of a project in OCP?
+        answer: |
+          You can view the resources with this command "oc get pods"
+
