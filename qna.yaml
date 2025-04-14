@@ -37,3 +37,8 @@ seed_examples:
         answer: The command to create project into OCP is "oc new-project my-project"
       - question: How to get resources of a project in OCP?
         answer: You can view the resources with this command "oc get pods"
+document:
+  repo: https://github.com/lcoronad/instructlab.git
+  commit: 80b515ae78893ec27665851c74d4824ffaf25f29
+  patterns:
+    - file.md
