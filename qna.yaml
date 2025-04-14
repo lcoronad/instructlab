@@ -2,4 +2,4 @@ version: 3
 domain: Red Hat Openshift Cheat Sheet
 created_by: mtclemente and lcoronad
 document_outline: |
-  A high-level listing of operations from command line interface is provided, followed by a walkthrough of an example application build, deploy, and management.A
+  A high-level listing of operations from command line interface is provided, followed by a walkthrough of an example application build, deploy, and management.
