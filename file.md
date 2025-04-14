@@ -79,53 +79,37 @@ This guide is mostly focused on the developer experience, however several admini
 
 oc logs  retrieve the logs for a resource (build configurations, deployment configurations, and pods)
 
-oc rsh
+oc rsh  remote shell into a container copy files to or from a container
 
-oc rsync
+oc rsync  execute a command in a container create a deployment configuration from image
 
 oc exec
 
-oc run 
+oc run  
 
 oc idle
 
 ## Build / Deploy
 
-oc rollout
+oc rollout  
 
-oc rollout latest
+oc rollout latest  start a new deployment with the latest state perform a rollback operation
 
 oc rollout undo
 
-oc rollout history
+oc rollout history  View historical information for a deployment configuration
 
-oc rollout status
+oc rollout status    watch the status of a rollout until complete tag existing images into image streams
 
 oc tag
 
-oc start-build 
+oc start-build   start a new build from a build configuration cancel a build in progress
 
 oc cancel-build
 
-oc import-image 
+oc import-image   pull in images and tags from an external Docker registry change the number of pod replicas for a deployment
 
-oc scale
-
-remote shell into a container copy files to or from a container
-
-execute a command in a container create a deployment configuration from image
-
-scale resources to zero replicas manage deployments from deployment configuration
-
-start a new deployment with the latest state perform a rollback operation
-
-oc rollout history - View historical information for a deployment configuration
-
-watch the status of a rollout until complete tag existing images into image streams
-
-start a new build from a build configuration cancel a build in progress
-
-pull in images and tags from an external Docker registry change the number of pod replicas for a deployment
+oc scale  scale resources to zero replicas manage deployments from deployment configuration
 
 ## Simple Build/Deploy Overview
 
