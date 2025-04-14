@@ -65,7 +65,6 @@ This guide is mostly focused on the developer experience, however several admini
 ## Additional resource management
 
 | oc patch            | Update fields for a resource with JSON or YAML segments                                   |
-|---------------------|-------------------------------------------------------------------------------------------|
 | oc extract          | get configmaps or secrets and save to disk                                                |
 | oc set              | Modify miscellaneous application resources                                                |
 | oc set probe        | Add a readiness/liveness probe on pod template/deployment  configuration                  |
@@ -78,25 +77,39 @@ This guide is mostly focused on the developer experience, however several admini
 
 ## Operational commands
 
-oc logs oc rsh
+oc logs  retrieve the logs for a resource (build configurations, deployment configurations, and pods)
 
-oc rsync oc exec
+oc rsh
 
-oc run oc idle
+oc rsync
+
+oc exec
+
+oc run 
+
+oc idle
 
 ## Build / Deploy
 
-oc rollout oc rollout latest
+oc rollout
 
-oc rollout undo oc rollout history
+oc rollout latest
 
-oc rollout status oc tag
+oc rollout undo
 
-oc start-build oc cancel-build
+oc rollout history
 
-oc import-image oc scale
+oc rollout status
 
-retrieve the logs for a resource (build configurations, deployment configurations, and pods)
+oc tag
+
+oc start-build 
+
+oc cancel-build
+
+oc import-image 
+
+oc scale
 
 remote shell into a container copy files to or from a container
 

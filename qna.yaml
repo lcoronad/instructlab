@@ -1,22 +1,39 @@
+created_by: mtclemente and lcoronad
 version: 3
 domain: Red Hat Openshift 4.15 Cheat Sheet
-created_by: mtclemente and lcoronad
-document_outline: |
-  A high-level listing of operations from command line interface (CLI) is provided, followed by a walkthrough of an example application build, deploy, and management.
+document_outline: >-
+  A high-level listing of operations from command line interface (CLI) is
+  provided, followed by a walkthrough of an example application build, deploy,
+  and management.
 seed_examples:
-  - context: |
-      Openshift (OCP) makes use of the Kubernetes upstream project to provide a secure, robust, and extendable manner for orchestrating applications. Openshift works to further the access management and build/deploy services that are provided in the upstream Kubernetes project. Development teams are empowered to own and maintain their applications through production environments, while operations teams can provide the guide rails for developers to have that application ownership in a multi-tenant environment.
+  - context: >-
+      OpenShift is Red Hat's Platform-as-a-Service (PaaS) that allows developers
+      to quickly develop, host, and scale applications in a cloud environment.
     questions_and_answers:
-      - question: |
-          How do I login into OCP with CLI?
-        answer: |
-          The command to login in OCP is "oc login -u user http://api.cluster:6443"
-      - question: |
-          How I create project into OCP with CLI?
-        answer: |
-          The command to create project into OCP is "oc new-project my-project"
-      - question: |
-          How to get resources of a project in OCP?
-        answer: |
-          You can view the resources with this command "oc get pods"
-
+      - question: How to view logs of a pod into OCP?
+        answer: >-
+          You can execute this command to view logs of any pod into OCP "oc logs
+          namepod"
+      - question: What is the command to import image into OCP
+        answer: The command to import image into OCP is "oc import-image"
+      - question: How to create new application from an existing image into OCP?
+        answer: >-
+          You can use the next command "oc new-app
+          centos/ruby-22-centos7~https://github.com/openshift/ruby-ex.git"
+  - context: >-
+      Openshift (OCP) makes use of the Kubernetes upstream project to provide a
+      secure, robust, and extendable manner for orchestrating applications.
+      Openshift works to further the access management and build/deploy services
+      that are provided in the upstream Kubernetes project. Development teams
+      are empowered to own and maintain their applications through production
+      environments, while operations teams can provide the guide rails for
+      developers to have that application ownership in a multi-tenant envi
+    questions_and_answers:
+      - question: How do I login into OCP with CLI?
+        answer: >-
+          The command to login in OCP is "oc login -u user
+          http://api.cluster:6443"
+      - question: How I create project into OCP with CLI?
+        answer: The command to create project into OCP is "oc new-project my-project"
+      - question: How to get resources of a project in OCP?
+        answer: You can view the resources with this command "oc get pods"
